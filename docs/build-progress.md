@@ -16,9 +16,10 @@ behavior is implemented and verified.
   intent, receipt, fill, claim, and explorer URL without secret-bearing fields.
 - Added Vercel Nitro and Railway release configurations, CI browser coverage,
   social preview artwork, architecture, deployment, demo, and SDK notes.
-- Verified 45 Vitest tests, 10 desktop/mobile Playwright flows, strict OpenSpec,
-  formatting, type-aware lint, typecheck, normal builds, frozen-lockfile
-  install, and the local Vercel-target build.
+- Verified from a fresh clone: frozen-lockfile install, strict OpenSpec,
+  formatting, type-aware lint, typecheck, 45 Vitest tests, 10 desktop/mobile
+  Playwright flows, and production builds. The local Vercel-target build also
+  passes.
 - Scanned source and generated browser assets for key-shaped values and private
   key material; no application secret was found.
 - Remaining external gates: funded Shannon order/claim evidence, production

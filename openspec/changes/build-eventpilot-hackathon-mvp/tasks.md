@@ -88,7 +88,7 @@
 - [ ] 8.1 Deploy the web app to Vercel and the single-replica control plane to Railway with a persistent volume.
 - [ ] 8.2 Verify CORS, rate limits, health checks, SSE proxy behavior, restart recovery, and runner lease behavior in deployment.
 - [ ] 8.3 Inspect the production browser bundle, logs, database, source history, and fixtures for secrets or operator tokens.
-- [ ] 8.4 Run the fresh-checkout install, strict OpenSpec validation, lint, typecheck, unit, integration, Playwright, and production build gates.
+- [x] 8.4 Run the fresh-checkout install, strict OpenSpec validation, lint, typecheck, unit, integration, Playwright, and production build gates.
 - [x] 8.5 Complete responsive and accessibility review for the exact judge journey.
 - [ ] 8.6 Freeze feature work on September 5 and move all non-P0 defects or ideas to a post-hackathon OpenSpec change.
 - [x] 8.7 Write the final README with setup, architecture, integration, risk model, limitations, judging steps, and evidence links.
