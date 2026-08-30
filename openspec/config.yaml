@@ -1,0 +1,44 @@
+schema: spec-driven
+context: |
+  Product: EventPilot, a no-wallet strategy policy studio and public evidence console for DreamDEX Event Contracts.
+  Hackathon: Somnia x DreamDEX Event Contracts Hackathon.
+  Internal submission target: 2026-09-07.
+  Tech stack: TypeScript, pnpm workspaces, React, Vite, Tailwind, TanStack Query, Fastify, Drizzle, SQLite, Vitest, Playwright.
+  Deployment: Vercel for the public web app and one Railway control-plane replica with a persistent volume.
+  Network: all protocol writes are restricted to Somnia Shannon testnet, chain ID 50312.
+  SDK: pin @somnia-chain/markets-sdk to 0.28.1 for the sprint and commit the lockfile.
+  Architecture: browser-local paper runs, server-side funded demo runner, shared deterministic evaluator.
+  Product language: use market-implied probability; paper results say would submit, never guaranteed fill or profit.
+  Protocol values: prices, quantities, collateral, ticks, and lots remain bigint-backed across protocol boundaries.
+  Security: private keys never cross HTTP APIs and never enter source, logs, browser bundles, fixtures, or databases.
+  Scope: no mainnet writes, no custom Solidity, no generative AI, no public custodial runner.
+rules:
+  proposal:
+    - Keep hackathon changes tightly scoped and identify explicit non-goals.
+    - Explain how the change improves at least one judging criterion.
+    - Identify any effect on protocol safety, secrets, or the funded runner.
+  specs:
+    - Use SHALL or MUST for normative behavior and include a WHEN/THEN scenario for every requirement.
+    - Include observable failure and recovery behavior for protocol, stream, persistence, and authentication capabilities.
+    - Do not put framework, class, or function names in behavioral requirements.
+  design:
+    - Document alternatives for every security-sensitive or cross-service decision.
+    - State how exact arithmetic, stale-data rejection, receipt verification, idempotency, and restart recovery are preserved.
+    - Keep the public browser and funded signer trust boundaries explicit.
+  tasks:
+    - Keep each task small enough for one focused session and order tasks by dependency.
+    - Every UI capability includes accessibility and judge-critical Playwright coverage.
+    - Every protocol-write task includes chain-gate, receipt, idempotency, and secret-redaction verification.
+    - Do not add P2 features before every P0 task is complete.
+operations:
+  apply:
+    guidance:
+      - Read the active proposal, specs, design, and tasks before editing code.
+      - Run focused tests before checking a task and run lint, typecheck, unit tests, and production builds at each phase boundary.
+      - Never use a production or mainnet private key during implementation or testing.
+      - Record verified testnet transaction and explorer evidence without storing secrets.
+  archive:
+    guidance:
+      - Run strict OpenSpec validation and implementation verification before archiving.
+      - Confirm the main specs describe the shipped behavior after archive.
+      - Summarize shipped capabilities, deferred items, known limitations, and evidence links.

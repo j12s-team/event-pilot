@@ -1,0 +1,11 @@
+schema: spec-driven
+created: 2026-08-28
+goal: Build the EventPilot hackathon MVP as a no-wallet policy studio, deterministic simulator, guarded Shannon runner, and public evidence console.
+affected_areas:
+  - web
+  - control-plane
+  - strategy-engine
+  - dreamdex-adapter
+  - persistence
+  - security
+  - deployment

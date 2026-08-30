@@ -1,0 +1,35 @@
+{
+  "name": "eventpilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A deterministic automation studio and evidence console for DreamDEX Event Contracts on Somnia Shannon testnet.",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "check": "pnpm openspec:validate && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "dev": "pnpm --parallel --filter @eventpilot/control-plane --filter @eventpilot/web dev",
+    "dev:api": "pnpm --filter @eventpilot/control-plane dev",
+    "dev:web": "pnpm --filter @eventpilot/web dev",
+    "format": "oxfmt --write apps/control-plane/src apps/web/app apps/web/e2e apps/web/hooks/use-markets.ts apps/web/lib/api.ts apps/web/vite.config.ts packages .oxlintrc.json apps/web/.oxlintrc.json package.json playwright.config.ts railway.json tsconfig.base.json vercel.json vitest.config.ts pnpm-workspace.yaml",
+    "format:check": "oxfmt --check apps/control-plane/src apps/web/app apps/web/e2e apps/web/hooks/use-markets.ts apps/web/lib/api.ts apps/web/vite.config.ts packages .oxlintrc.json apps/web/.oxlintrc.json package.json playwright.config.ts railway.json tsconfig.base.json vercel.json vitest.config.ts pnpm-workspace.yaml",
+    "lint": "oxlint --type-aware --type-check .",
+    "openspec:validate": "openspec validate build-eventpilot-hackathon-mvp --strict",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "pnpm -r --if-present typecheck"
+  },
+  "devDependencies": {
+    "@fission-ai/openspec": "0.17.2",
+    "@playwright/test": "1.55.0",
+    "@types/node": "22.19.19",
+    "oxfmt": "0.61.0",
+    "oxlint": "1.76.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@10.14.0"
+}
