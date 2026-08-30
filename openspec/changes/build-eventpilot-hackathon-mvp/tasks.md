@@ -1,7 +1,7 @@
 ## 1. Repository and OpenSpec foundation
 
 - [x] 1.1 Initialize the pnpm TypeScript workspace with `apps/web`, `apps/control-plane`, and shared package directories.
-- [ ] 1.2 Initialize OpenSpec for Codex, commit generated workflow files, and confirm `openspec/config.yaml` is active.
+- [x] 1.2 Initialize OpenSpec for Codex, commit generated workflow files, and confirm `openspec/config.yaml` is active.
 - [x] 1.3 Add strict TypeScript, formatting, linting, Vitest, Playwright, and root `check` scripts.
 - [x] 1.4 Add environment schema validation with Shannon-only network constants and `DRY_RUN=true` as the default.
 - [x] 1.5 Add structured logging with allowlisted fields and automated secret-redaction tests.
@@ -10,7 +10,7 @@
 
 ## 2. DreamDEX read adapter and live market data
 
-- [ ] 2.1 Pin `@somnia-chain/markets-sdk` to `0.28.1`, commit the lockfile, and record the version in diagnostics.
+- [x] 2.1 Pin `@somnia-chain/markets-sdk` to `0.28.1`, commit the lockfile, and record the version in diagnostics.
 - [x] 2.2 Implement runtime venue and active binary-market discovery without trusting a durable pool address.
 - [x] 2.3 Normalize BTC and ETH 15-minute and 1-hour markets into `MarketSnapshotV1` using strike and interval fields.
 - [x] 2.4 Read best bid, best ask, depth, spread, expiry, indexer timestamp, and source block where available.
